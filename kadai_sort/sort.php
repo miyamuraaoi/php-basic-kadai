@@ -7,22 +7,31 @@
 </head>
 
 <body>
-  <p>
+  <P>
     <?php
-    echo '昇順にソートします。<br>';
+    // ソートする配列を宣言
+    $nums = [15, 4, 18, 23, 10 ];
+    $order = TRUE;
 
-    $fruits = array(15, 4, 18, 23, 10);
-    sort($fruits);
-    foreach ($fruits as $key => $val) {
-      echo  $val . "<br>";
+    function sort_2way() {
+      echo '昇順にソートします。<br>';
+
+      $fruits = array(15, 4, 18, 23, 10);
+      sort($fruits);
+      foreach ($fruits as $key => $val) {
+        echo  $val . "<br>";
+      }
+  
+      echo '降順にソートします。<br>';
+      $fruits = array(15, 4, 18, 23, 10);
+      rsort($fruits);
+      foreach ($fruits as $key => $val) {
+          echo $val . "<br>";
+        
+      }
     }
-
-    echo '降順にソートします。<br>';
-    $fruits = array(15, 4, 18, 23, 10);
-    rsort($fruits);
-    foreach ($fruits as $key => $val) {
-        echo $val . "<br>";
-}
+    
+    sort_2way();
     ?>
   </p>
 </body>
